@@ -7,6 +7,7 @@
 <script setup>
     import {useFilterStore} from "./filterStore";
     import {ref} from 'vue';
+    import {useFilterStore2} from "./filterStore2";
 
     const changeFilter = (prop, value) => {
 
