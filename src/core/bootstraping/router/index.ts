@@ -1,13 +1,21 @@
-import HelloWorld from '../../../components/HelloWorld.vue';
-import {createRouter,createWebHashHistory} from 'vue-router';
-const About = {template: '<div>About</div>'}
+import HomeLayOut from '../../layouts/HomeLayout/HomeLayOut.vue';
+import ModuleBase from '../../layouts/ModuleLayout/ModuleBase.vue';
+import {createRouter, createWebHashHistory} from 'vue-router';
+import AdminModule from '../../../modules/administracion'
+
+
+const modules = [
+    AdminModule
+];
+
+const modulesRoutes = modules.map(e => e.router.routes);
 
 // 2. Define some routes
 // Each route should map to a component.
 // We'll talk about nested routes later.
 const routes = [
-    {path: '/', component: HelloWorld},
-    {path: '/about', component: About},
+    {path: '/', component: HomeLayOut},
+    {path: '/modules', component: ModuleBase, children: modulesRoutes},
 ]
 
 // 3. Create the router instance and pass the `routes` option
