@@ -1,4 +1,3 @@
-
 // @ts-ignore
 import {defineStore, storeToRefs} from "pinia";
 // @ts-ignore
@@ -17,6 +16,7 @@ const useCounterStore = defineStore('counter', () => {
 const useCounterStoreTools = () => {
     const store = useCounterStore();
 
+
     const {count} = storeToRefs(store);
     // the increment action can be just extracted
     const {increment} = store;
@@ -24,4 +24,4 @@ const useCounterStoreTools = () => {
     return {increment, count};
 };
 
-export {useCounterStore,useCounterStoreTools}
+export {useCounterStore, useCounterStoreTools}

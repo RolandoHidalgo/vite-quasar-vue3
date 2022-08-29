@@ -1,7 +1,7 @@
 import {createApp} from 'vue'
 import {Quasar} from 'quasar'
 import quasarLang from 'quasar/lang/es'
-import {router} from './core/bootstraping/router/index'
+import {router} from './core/bootstraping/router'
 import {createPinia} from 'pinia'
 // Import icon libraries
 import '@quasar/extras/roboto-font/roboto-font.css'
